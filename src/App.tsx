@@ -26,6 +26,9 @@ const App = () => {
 
   console.log(questions);
 
+  /**
+   * On start button click load new set of questions and refresh the app state
+   */
   const startQuiz = async () => {
     setLoading(true);
     setGameOver(false);
@@ -40,6 +43,10 @@ const App = () => {
     setLoading(false);
   };
 
+  /**
+   * On button click check if button value is the correct answer
+   * @param {Event} event Mouse click on the button
+   */
   const checkAnswer = (event: React.MouseEvent<HTMLButtonElement>) => {
     if (!gameOver) {
       debugger;
@@ -60,6 +67,9 @@ const App = () => {
     }
   };
 
+  /**
+   * Move to the next question or toggle gameOver if there is none
+   */
   const nextQuestion = () => {
     // move to te next question if not on the last question
     const nextQuestionIndex = number + 1;

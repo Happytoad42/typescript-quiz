@@ -17,6 +17,12 @@ export enum Difficulty {
   HARD = 'hadrd',
 }
 
+/**
+ * Fetch new set of questions from trivia api
+ * @param {number} amount Amount of questions to load
+ * @param {string} difficulty desired questions difficulty (easy, medium, hard)
+ * @returns {Array} An array of quiz quiestions objects
+ */
 export const fetchQuestions = async (amount: number, difficulty: Difficulty ) => {
   const endpoint = `https://opentdb.com/api.php?amount=${amount}&difficulty=${difficulty}`;
   const data = await (await fetch(endpoint)).json();

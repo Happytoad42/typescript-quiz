@@ -13,6 +13,11 @@ export type QuestionCardProps = {
   totalQuestions: number;
 };
 
+/**
+ * Question card component
+ * @param {object} QuestionCard component props
+ * @returns {JSX.Element} React component
+ */
 const QuestionCard: React.FC<QuestionCardProps> = ({
   question,
   answers,
