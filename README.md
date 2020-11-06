@@ -1,6 +1,6 @@
 # Simple trivia app
 
-## Made with React using Typescript and Styled components
+Made with React using Typescript and Styled components
 
 ## Setup
 
